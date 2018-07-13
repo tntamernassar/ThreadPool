@@ -64,7 +64,11 @@ public class ThreadPool {
 						@Override
 						public void run() {
 							System.out.println("Thread #"+nextThread[0]+" started a new Task ");
-							t.apply();
+							boolean success = t.apply();
+							if(success)
+								t.onSuccess();
+							else
+								t.onFail();
 							status[nextThread[0]] = false;
 							System.out.println("Thread #"+nextThread[0]+" finished his Task ");
 						}

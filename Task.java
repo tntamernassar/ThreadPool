@@ -6,5 +6,7 @@ abstract public class Task {
 	}
 	
 	abstract public boolean apply();
+	abstract public void onSuccess();
+	abstract public void onFail();
 	
 }
