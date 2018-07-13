@@ -3,7 +3,8 @@ public class Test {
 
 	
 	public static void main(String[] args) {
-		ThreadPool pool = new ThreadPool(3);
+		//create Threadpool with 8 threads
+		ThreadPool pool = new ThreadPool(8);
 		
 		//this task returning true , so it will act like success task
 		pool.addTask(new Task() {
@@ -26,7 +27,7 @@ public class Test {
 			}
 		});
 		
-		//this task returning false , so it will act like failed T=task
+		//this task returning false , so it will act like failed task
 		pool.addTask(new Task() {
 			
 			@Override
