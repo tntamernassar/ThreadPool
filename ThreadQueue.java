@@ -7,7 +7,7 @@ public class ThreadQueue {
 	private ThreadPool pool;
 	public ThreadQueue() {
 		data = new LinkedList<Task>();
-		pool = new ThreadPool(70);
+		pool = new ThreadPool(8);
 		pool.start();
 	}
 	
